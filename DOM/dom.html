@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="o"> </h1>
+    <p></p>
+    <h2 class="i"></h2>
+    <img id="k" src="./a.jpg" alt="" height="300px" width="300px">
+    <button onclick="change()">click me</button>
+    <button onclick="kl()">click here</button>
+    <script>
+document.getElementById("o").innerHTML="hello"
+document.getElementsByTagName("p")[0].innerHTML="hiiiii"
+document.getElementsByClassName("i")[0].innerHTML="hello world"
+
+let isimage = false
+let istext  = false
+
+function change(){
+   const img =  document.getElementById("k")
+   if (isimage){
+    img.src = "a.jpg";
+   } else {
+    img.src = "b.jpeg"
+    }  isimage = !isimage;
+
+}
+function kl(){
+   const heading = document.getElementById("o")
+   if (istext){
+        heading.style.color = "black";
+   } else {
+        heading.style.color = "red";
+   }
+   istext = !istext;
+}
+    </script>
+</body>
+</html>
